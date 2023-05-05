@@ -10,9 +10,10 @@ const initialState = {
 const jobsSlice = createSlice({
   name: "jobs",
   initialState,
+  reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getJobs.pending, (state, action) => {
+      .addCase(getJobs.pending, (state) => {
         state.loading = true;
       })
       .addCase(getJobs.fulfilled, (state, action) => {
